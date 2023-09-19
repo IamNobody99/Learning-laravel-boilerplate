@@ -7,7 +7,8 @@ use App\Models\Auth\User\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Repositories\Access\User\EloquentUserRepository;
-use Validator;
+use Illuminate\Support\Facades\Validator;
+
 
 class UserController extends Controller
 {   
