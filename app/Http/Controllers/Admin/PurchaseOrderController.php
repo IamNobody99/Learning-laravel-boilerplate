@@ -34,15 +34,7 @@ class PurchaseOrderController extends Controller
         return view('admin.products.index');
     }
     public function getProductDestroy($id){
-        $status = $this->repository->destroy($id);
-
-        if($status)
-        {
-            return redirect()->route('admin.products.index', ["products" => $products])->withFlashSuccess('Product Deleted Successfully!');
-        }
-
-        return redirect()->route('admin.products.index', ["products" => $products])->withFlashDanger('Unable to Delete Product!');
-        // return view('admin.products.index');
+        return view('admin.products.index');
     }
     public function getPurchaseOrderLineList(){
         $purchaseOrderLines = PurchaseOrderLine::paginate(10);
