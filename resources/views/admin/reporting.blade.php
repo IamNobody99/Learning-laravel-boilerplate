@@ -7,7 +7,7 @@
         Ini Halaman Reporting
     </div>
     <input name="dates">
-    <select class="js-example-basic-single" name="state" multiple="multiple">
+    <select class="js-example-basic-single" name="state[]" multiple="multiple">
         @foreach($products as $product)
             <option value="{{ $product->id }}">{{ $product->product_name }}</option>
         @endforeach
